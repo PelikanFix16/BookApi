@@ -2,6 +2,8 @@ from fastapi import FastAPI, APIRouter
 import uvicorn
 
 
+
+
 app = FastAPI(title="Book API",openapi_url="/openapi.json")
 
 api_router = APIRouter()
