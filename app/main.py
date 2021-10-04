@@ -1,5 +1,7 @@
 from fastapi import FastAPI, APIRouter
 import uvicorn
+from dotenv import load_dotenv
+load_dotenv()
 
 
 
