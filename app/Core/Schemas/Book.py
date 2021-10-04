@@ -14,3 +14,5 @@ class BookBase(BaseModel):
         orm_mode = True
     
     
+class BookTitleQuery(BaseModel):
+    q:str
