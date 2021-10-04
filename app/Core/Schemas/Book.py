@@ -9,6 +9,7 @@ class BookBase(BaseModel):
     average_rating:float
     ratings_count:int
     thumbnail:str
+    book_id:str
     class Config:
         orm_mode = True
     

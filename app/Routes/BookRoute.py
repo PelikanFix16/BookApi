@@ -5,6 +5,7 @@ from app.database.db_connect import get_db
 from app.Core.Models.Book import Book
 from app.database.CRUD.Books import create_book
 from app.Routes import BookRoute
+from app.Services.LoadData import GetBooks
 
 router = APIRouter(
     prefix="/books",
@@ -14,7 +15,7 @@ router = APIRouter(
 
 
 @router.get("/",response_model=BookBase)
-def root(book: BookBase,db:Session = Depends(get_db)):
-    db_book = create_book(db,book)
-    return db_book
+def root(db:Session = Depends(get_db)):
+    t = GetBooks("war")
+    print(t["items"][0])
 

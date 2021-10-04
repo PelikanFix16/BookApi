@@ -15,4 +15,6 @@ class Book(Base):
     average_rating = Column(Float,nullable=False)
     ratings_count = Column(Integer,nullable=False)
     thumbnail = Column(Text,nullable=False)
+    book_id = Column(Text,nullable=False)
+    
     
