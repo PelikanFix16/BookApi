@@ -1,9 +1,10 @@
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
+import os
 
+DB_CONNECTION=os.getenv("DATABASE")
 
-DB_CONNECTION="mysql+pymysql://root:passwordroot@localhost/db"
 
 engine = create_engine(
     DB_CONNECTION

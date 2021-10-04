@@ -6,7 +6,7 @@ class BookBase(BaseModel):
     authors:List[str]
     published_date:int
     categories:List[str]
-    average_rating:int
+    average_rating:float
     ratings_count:int
     thumbnail:str
     class Config:
