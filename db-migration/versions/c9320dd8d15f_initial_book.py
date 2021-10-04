@@ -1,8 +1,8 @@
-"""Initial book migration
+"""Initial book
 
-Revision ID: 2ea73658ebfc
-Revises: 5f90527417b3
-Create Date: 2021-10-04 21:17:10.336824
+Revision ID: c9320dd8d15f
+Revises: 9ca50cb6c7d4
+Create Date: 2021-10-04 23:02:09.014246
 
 """
 from alembic import op
@@ -10,8 +10,8 @@ import sqlalchemy as sa
 from sqlalchemy.dialects import mysql
 
 # revision identifiers, used by Alembic.
-revision = '2ea73658ebfc'
-down_revision = '5f90527417b3'
+revision = 'c9320dd8d15f'
+down_revision = '9ca50cb6c7d4'
 branch_labels = None
 depends_on = None
 
@@ -24,7 +24,7 @@ def upgrade():
     sa.Column('authors', mysql.JSON(), nullable=False),
     sa.Column('published_date', sa.Integer(), nullable=False),
     sa.Column('categories', mysql.JSON(), nullable=False),
-    sa.Column('average_rating', sa.Integer(), nullable=False),
+    sa.Column('average_rating', sa.Float(), nullable=False),
     sa.Column('ratings_count', sa.Integer(), nullable=False),
     sa.Column('thumbnail', sa.Text(), nullable=False),
     sa.PrimaryKeyConstraint('id')

@@ -1,4 +1,4 @@
-from sqlalchemy import Boolean, Column, ForeignKey, Integer, Text
+from sqlalchemy import Boolean, Column, ForeignKey, Integer, Text,Float
 from sqlalchemy.dialects.mysql import JSON
 from sqlalchemy.orm import relationship
 from sqlalchemy.ext.declarative import declarative_base
@@ -12,7 +12,7 @@ class Book(Base):
     authors = Column(JSON,default=[],nullable=False)
     published_date = Column(Integer,nullable=False)
     categories = Column(JSON,default=[],nullable=False)
-    average_rating = Column(Integer,nullable=False)
+    average_rating = Column(Float,nullable=False)
     ratings_count = Column(Integer,nullable=False)
     thumbnail = Column(Text,nullable=False)
     

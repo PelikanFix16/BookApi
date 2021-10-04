@@ -2,22 +2,15 @@ from fastapi import FastAPI, APIRouter
 import uvicorn
 from dotenv import load_dotenv
 load_dotenv()
-
+from app.Routes import BookRoute
 
 
 
 app = FastAPI(title="Book API",openapi_url="/openapi.json")
 
-api_router = APIRouter()
+app.include_router(BookRoute.router)
 
-@api_router.get("/", status_code=200)
-def root() -> dict:
-    """
-    Root Get
-    """
-    return {"msg": "Hello, World!"}
 
-app.include_router(api_router)
 
 
 if __name__ == "__main__":
