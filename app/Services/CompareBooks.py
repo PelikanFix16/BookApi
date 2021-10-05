@@ -16,3 +16,14 @@ def CompareBooks(book1,book2):
         not_equal = True
     
     return not_equal
+
+
+
+def CompareArraysBooks(arrBook1,arrBook2):
+    new_arr = []
+    for i in arrBook1:
+        for j in arrBook2:
+            if not CompareBooks(i,j):
+                print(i)
+                new_arr.append(i)
+    return new_arr
