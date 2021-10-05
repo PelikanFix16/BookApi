@@ -46,7 +46,7 @@ Connection string must be set up in Environment
 ### **Requirments**
 <br/>
 
-    pip3 install -r requirments.txt
+    pip3 install -r requirements.txt
 
 
 <br/>
