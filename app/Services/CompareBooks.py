@@ -24,6 +24,5 @@ def CompareArraysBooks(arrBook1,arrBook2):
     for i in arrBook1:
         for j in arrBook2:
             if not CompareBooks(i,j):
-                print(i)
                 new_arr.append(i)
     return new_arr
