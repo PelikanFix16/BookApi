@@ -131,6 +131,14 @@ def upgrade():
 <br/>
 
 
+### **Swagger**
+
+- **URL**
+    
+     /docs
+
+<br/>
+<br/>
 
 ### **Books**
 
