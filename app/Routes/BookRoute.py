@@ -24,7 +24,7 @@ router = APIRouter(
 def getAll(db:Session = Depends(get_db),
             published_date:Optional[List[int]] = Query(None),
             sort:Optional[str] = "ASC",
-            authors:Optional[List[str]] = Query(None)):
+            authors:Optional[List[str]] = Query(None),idBook:Optional[str] = None):
     books = []
     if published_date:
         books.extend(get_book_by_date(db,published_date))
@@ -38,6 +38,10 @@ def getAll(db:Session = Depends(get_db),
         else:
             books = arr_temp
         
+    if idBook and books == None:
+        books.append(get_book_by_book_id(db,idBook))
+
+
     if not books:
         books = get_all_books(db)
     
